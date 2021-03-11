@@ -140,9 +140,7 @@ $sql = "Select * from cart WHERE username='{$username}'";
         <div style="margin-left:270px">You have <?php echo $count ?> item(s) in cart.</div>
             <div class="row">
                 
-           
- <table border="2" width="1000" align="center">
-     
+
      <tr><th><b>Product ID</b></th><th><b>Product Name</b></th><th><b>Quantity</b></th><th><b>Total Price(RM)</b></th><th><b>    </b></th></tr>
   
       <?php
@@ -183,8 +181,7 @@ $sql = "Select * from cart WHERE username='{$username}'";
                 
     </main>
   <br>
-      <form align="center">
-       
+
         
       <input type="button" value="Proceed to check out" name="checkOut" onclick="location='checkOut.php'"<?php if($count==0){ ?> disabled style='color:grey' <?php } else{ ?> style='color:black' <?php } ?>>
        
