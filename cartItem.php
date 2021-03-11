@@ -25,7 +25,7 @@ $sql = "Select * from cart WHERE username='{$username}'";
      mysqli_query($dbc, $sqlupdate);
      echo "<script>window.location.href = 'cartItem.php'</script>";
      
- 
+ $hello= mysql($dbc,$sql)
  $takecart = mysqli_query($dbc, $sql);
  $totalprice = 0;
  
