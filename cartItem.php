@@ -8,7 +8,7 @@ $count = 0;
 session_start();
 $username= isset($_SESSION['currentUser'])?$_SESSION['currentUser']:"Anonymous";
 $sql = "Select * from cart WHERE username='{$username}'"; 
- if(isset($_REQUEST['p'])){
+ if(isset($_REQUEST['p']))
      $cart_id = $_REQUEST['p'];
      $sqldlt = "Delete FROM cart where cart_id = '$cart_id'";
      $sqlGetID = "Select quantity,product_id from cart where cart_id ='$cart_id'";
@@ -21,11 +21,11 @@ $sql = "Select * from cart WHERE username='{$username}'";
      $r=mysqli_fetch_array($result);
      $qty = $r["quantity"];
      $qty+=$quantity;
-     $sqlupdate = "Update handbag SET quantity='{$qty}'WHERE handbag_ID='$product_id'";
+  
      mysqli_query($dbc, $sqlupdate);
      echo "<script>window.location.href = 'cartItem.php'</script>";
      
- }
+ 
  $takecart = mysqli_query($dbc, $sql);
  $totalprice = 0;
  
